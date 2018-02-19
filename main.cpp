@@ -3,7 +3,7 @@
 cv::VideoCapture cap;
 
 int main(int argc, char** argv) {
-	cap = cv::VideoCapture("C:/Users/jordan/Videos/hdk.mp4");
+	cap = cv::VideoCapture("C:/Users\\Jordan\\Videos\\joint2.mp4");
 	bool eof = false;
 	float blurSize = 0.1f;
 	cv::namedWindow("video 1", 1);
