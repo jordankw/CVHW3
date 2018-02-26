@@ -1,7 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-cv::VideoCapture cap;
+cv::VideoCapture cap, cap_out;
 cv::Rect pellet1(7, 47, 10, 10);
 cv::Rect pellet2(207, 47, 10, 10);
 cv::Rect pellet3(7, 207, 10, 10);
@@ -89,7 +89,8 @@ void detectLives(cv::Mat& frame) {
 }
 
 int main(int argc, char** argv) {
-	cap = cv::VideoCapture("HW3/templates/input4_1.mp4");
+	cap = cv::VideoCapture("HW3/templates/input4_2.mp4");
+	//cap_out = cv::VideoCapture(HW3/)
 	bool eof = false;
 	float blurSize = 0.1f;
 	cv::namedWindow("video 1", 1);
@@ -139,10 +140,10 @@ int main(int argc, char** argv) {
 		gray = (gray > 128);
 
 
-		ghostBlobs(frame);
+		//ghostBlobs(frame);
 		initPellet(pelletColor);
 		detectPellet(pacman);
-		detectLives(gray);
+		//detectLives(gray);
 		cv::waitKey(30);
 		
 		i++;
